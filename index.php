@@ -11,7 +11,9 @@ if( $mysqli->connect_errno ) {
     echo 'gagal bang ada yang error' . $mysqli->connect_error;
 }
 
-$sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('fauzan', 'cirebon')";
+// multi query
+$sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('seena', 'jepara');";
+$sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('budi', 'cianjur');";
 
 if( $mysqli->query($sql) === true ) {
     echo 'berhasil';
