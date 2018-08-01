@@ -14,11 +14,15 @@ if( $mysqli->connect_errno ) {
 // menghapus data
 // $sql = "DELETE FROM murids WHERE nama='fauzan'";
 
-// if( $mysqli->query($sql) === true ) {
-//     echo 'berhasil';
-// } else {
-//     echo 'gagal delete';
-// }
+
+// mengedit data
+$sql = "UPDATE murids SET nama='fauzan', alamat='cirebon' WHERE nama='seena'";
+
+if( $mysqli->query($sql) === true ) {
+    echo 'berhasil';
+} else {
+    echo 'gagal delete';
+}
 
 
 $mysqli->close();
