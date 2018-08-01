@@ -25,12 +25,12 @@ if( $mysqli->connect_errno ) {
 // }
 
 // prepare statement
-// $statement = $mysqli->prepare("INSERT INTO murids (`nama`, `alamat`) VALUES (?. ?)");
-// $statement->bind_param('ss', $nama, $alamat);
+$statement = $mysqli->prepare("INSERT INTO murids (`nama`, `alamat`) VALUES (?, ?)"); // ini udah ada sql injectionya
+$statement->bind_param('ss', $nama, $alamat);
 
-// $nama = "mas mase";
-// $alamat = "utara";
-// $statement->execute(); 
+$nama = "mas mase";
+$alamat = "utara";
+$statement->execute(); 
 
 
 $mysqli->close();
