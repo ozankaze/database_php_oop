@@ -13,16 +13,19 @@ if( $mysqli->connect_errno ) {
 
 // multi query
 // $sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('seena', 'jepara');";
-// $sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('budi', 'cianjur');";
+// $sql .= "INSERT INTO murids (`nama`, `alamat`) VALUES ('budi', 'cianjur');";
+// $sql .= "INSERT INTO murids (`nama`, `alamat`) VALUES ('seena', 'kendal');";
+// $sql = "INSERT INTO murids (`nama`, `alamat`) VALUES ('seena', 'jepara'), ('budi', 'cianjur');";
+// $mysqli->query($sql) => query
 
-// if( $mysqli->query($sql) === true ) {
+// if( $mysqli->multi_query($sql) === true ) {
 //     echo 'berhasil';
 // } else {
 //     echo 'gagal';
 // }
 
 // prepare statement
-// $statement = $mysqli->prepare('INSERT INTO murids (`nama`, `alamat`) VALUES (?. ?)');
+// $statement = $mysqli->prepare("INSERT INTO murids (`nama`, `alamat`) VALUES (?. ?)");
 // $statement->bind_param('ss', $nama, $alamat);
 
 // $nama = "mas mase";
